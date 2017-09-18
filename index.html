@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cost Calculator</title>
+<link rel="stylesheet" type="text/css" href="costs.css">
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="costs.js"></script>
+<h1>Cost Calculator</h1>
+<div class="container">
+  <div class="row">
+    <div class="col col-main">
+
+      <label for="sellingPrice" class="label">Price You Want To Sell Your Product For</label>
+      <div class="input-wrapper">
+        <input id="sellingPrice" class="input-field" type="text" placeholder="20">
+        <span class="input-addon">$</span>
+      </div>
+
+      <label for="salesTax" class="label">Is a sales tax included in your price?</label>
+      <div class="input-wrapper">
+        <input id="salesTax" class="input-field" type="text" placeholder="5">
+        <span class="input-addon">%</span>
+      </div>
+
+      <label for="productCost" class="label">Cost Of Your Product</label>
+      <div class="input-wrapper">
+        <input id="productCost" class="input-field" type="text" placeholder="3">
+        <span class="input-addon">$</span>
+      </div>
+
+      <label for="transactionFee" class="label">Transaction Fee</label>
+      <div class="input-wrapper">
+        <input id="transactionFee" class="input-field" type="text" placeholder="3.4">
+        <span class="input-addon">%</span>
+      </div>
+
+      <label for="currencyChangingFee" class="label">Currency Changing Fee (0% if the currency will not get changed)</label>
+      <div class="input-wrapper">
+        <input id="currencyChangingFee" class="input-field" type="text" placeholder="2">
+        <span class="input-addon">%</span>
+      </div>
+
+      <label for="affiliateCommission" class="label">Affiliate Commission</label>
+      <div class="input-wrapper">
+        <input id="affiliateCommission" class="input-field" type="text" placeholder="10">
+        <span class="input-addon">%</span>
+      </div>
+
+      <label for="discountRate" class="label">Discount Rate</label>
+      <div class="input-wrapper">
+        <input id="discountRate" class="input-field" type="text" placeholder="15">
+        <span class="input-addon">%</span>
+      </div>
+
+      <label for="otherCosts" class="label">Other Costs</label>
+      <div class="input-wrapper">
+        <input id="otherCosts" class="input-field" type="text" placeholder="5">
+        <span class="input-addon">$</span>
+      </div>
+
+      <button onclick="calculateCosts();">Calculate</button>
+
+    </div>
+    <div class="col">
+      <div class="output-wrapper">
+        <p class="label">Product Cost</p>
+        <p class="output-value-red">$<span id="productCostValue"></span></p>
+      </div>
+      <div class="output-wrapper">
+        <p class="label">Transaction Fee</p>
+        <p class="output-value-red">$<span id="transactionFeeCost"></span></p>
+      </div>
+      <div class="output-wrapper">
+        <p class="label">Currency Changing Fee</p>
+        <p class="output-value-red">$<span id="currencyChangingFeeCost"></span></p>
+      </div>
+      <div class="output-wrapper">
+        <p class="label">Affiliate Commission</p>
+        <p class="output-value-red">$<span id="affiliateCommissionCost"></span></p>
+      </div>
+      <div class="output-wrapper">
+        <p class="label">Other Costs</p>
+        <p class="output-value-red">$<span id="otherCostsValue"></span></p>
+      </div>
+      <div class="output-wrapper">
+        <p class="label">Total Cost</p>
+        <p class="output-value-red">$<span id="totalCost"></span></p>
+      </div>
+      <div class="output-wrapper">
+        <p class="label">Sales Tax</p>
+        <p class="output-value-red">$<span id="salesTaxValue"></span></p>
+      </div>
+      <div class="output-wrapper">
+        <p class="label">Discount</p>
+        <p class="output-value-red">$<span id="discountCost"></span></p>
+      </div>
+
+      <div class="output-wrapper">
+        <p class="label">Price After Discount</p>
+        <p class="output-value-green">$<span id="productPrice"></span></p>
+      </div>
+      <div class="output-wrapper">
+        <p class="label">Profit</p>
+        <p class="output-value-green">$<span id="profit"></span></p>
+      </div>
+    </div>
+  </div>
