@@ -56,7 +56,7 @@ function calculateCosts() {
   salesTax = priceAfterTax * (salesTax / 100);
   var transactionFeeCost = productPrice * (transactionFee / 100);
   var currencyChangingFeeCost = productPrice * (currencyChangingFee / 100);
-  var affiliateCost = sellingPrice * (affiliateCommission / 100);
+  var affiliateCost = productPrice * (affiliateCommission / 100);
   var totalCost = transactionFeeCost + currencyChangingFeeCost + affiliateCost + productCost + otherCosts;
   var profit = priceAfterTax - totalCost;
 
